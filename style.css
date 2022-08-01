@@ -18,7 +18,10 @@ a {
     text-decoration: none;
 }
 ul,
-body {
+body,
+h1,
+h2,
+p {
     margin: 0%;
     padding: 0%;
 }
@@ -26,6 +29,7 @@ body {
 
 * {
     box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
 }
 
 li {
@@ -108,8 +112,10 @@ li {
     text-align: center;
     color: white;
     font-family: Arial, Helvetica, sans-serif;
-    margin-top: 290px;
-    margin-bottom: 85px;
+    padding-top: 290px;
+    padding-bottom: 85px;
+    background: url(../pink_loyaut/img/bg-header.png) no-repeat top center;
+    background-size: cover;
 }
 
 .banner__main {
@@ -124,26 +130,110 @@ li {
     font-weight: normal;
 }
 
-
-/*MEDIA*/
-
-@media (max-width: 740px) {
-    .header__menu,
-    .header__main {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }
-    .header__nav,
-    .header__menu {
-        margin: auto;
-    }
-}   
-    .banner__main {
-    font-size: 30px;
-    margin: 0 0 10px 0;
+/* MAIN CONTENT STYLES*/
+/*banner content styles*/
+.banner-content {
+    text-align: center;
 }
 
-    .banner__text {
-        font-size: 18px;
+.banner-content__main {
+    padding: 65px 0 30px 0;
+    margin: 0;
+    font-size: 35px;
+    font-weight: normal;
 }
+
+/* category styles*/
+.categories {
+    margin-top: 85px;
+}
+
+.categories__nav {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.categories__link {
+    display: flex;
+    height: 180px;
+    width: 180px;
+    border-radius: 50%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    color: white;
+    position: relative;
+    margin: 8px;
+}
+
+.categories__link_bg_blue {
+    background: #4eb9f4;
+}
+
+.categories__link_bg_green {
+    background: #6fc125;
+}
+
+.categories__link_bg_red {
+    background: #ff5649;
+}
+
+.categories__link_bg_brown {
+    background: #e48f23;
+}
+
+.categories__title {
+    margin-top: 10px;
+    display: block;
+}
+.categories__desk {
+    display: none;
+    width: 125px;
+    height: 90px;
+    font-size: 12px;
+    position: absolute;
+    text-align: center;
+}
+
+.categories__link:hover .categories__desk {
+    display: block;
+}
+
+
+.categories__link:hover .categories__title,
+.categories__link:hover .categories__img {
+    opacity: 0.5;
+}
+
+/*Articles block styles*/
+.articles {
+    margin-top: 95px; 
+    padding-left: 65px;
+}
+
+.article {
+    margin-bottom: 75px;
+    display: flex;
+}
+
+.article__block {
+    padding-left: 25px;
+}
+
+.article__main {
+    font-weight: normal;
+    font-size: 25px;
+    margin-bottom: 25px;
+}
+
+.article__desk {
+    color: #8b8b8b;
+}
+
+.article__img {
+    max-width: 180px;
+    width: 100%;
+    
+}
+
